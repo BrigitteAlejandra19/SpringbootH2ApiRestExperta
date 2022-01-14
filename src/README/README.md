@@ -38,14 +38,14 @@ Internamente este endpoint controla si la tabla de Bares esta vacia la carga si 
 - [x] Intellij ide.
 
 ### Arquitectura utilizada
-Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Sprigboot donde se agregaron las siguientes capas: 
+Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Springboot donde se agregaron las siguientes capas: 
 1) Controlador: contiene los endpoinds solicitados en el ejercicio
 2) Servicio: Contiene la logica de negocio para conectarse a la capa de datos
 3) Repositorio: contiene la logica del acceso a los datos (JPA)
 
 ### Posibles mejoras
 - Clean code
-- Agregar las validaciones para los diferentes enpoinds que solicitan parametros de entrada.
+- Agregar las validaciones para los diferentes enpoinds que requieren parametros de entrada.
 - Mejorar las excepciones
 -completar los casos de prueba ya que se realizo un par como muestra.
 - Dockerizar
@@ -58,20 +58,9 @@ Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Spri
 ![img.png](img.png)
 　
 
-```javascript
+```
 curl --location --request POST 'http://localhost:8080/bar/init' \
 --header 'Content-Type: application/json' \
---data-raw '
- {
-     "nombre": "Calmate Carrie",
-    "domicilio": "Billinghurst 980",
-    "puntuacion": "4",
-    "email": "calamtecarrie2@gmail.com",
-    "telefono": "123456632",
-    "cuit": "123555",
-    "horario": "12:30:00",
-    "estacionamiento": "si"
- }
  ```   
 2) Endpoint para guardar bares a la base de datos:
 ![img_1.png](img_1.png)
@@ -100,8 +89,8 @@ curl --location --request POST 'http://localhost:8080/bar/save' \
 curl --location --request GET 'http://localhost:8080/bar/all'
 ```
 4) Endpoint para mostrar nombre, domicilio y puntuacion de los bares:
- ![img_3.png](img_3.png)   
-
+ ![img_3.png](img_3.png)
+   
 ```
 curl --location --request GET 'http://localhost:8080/bar/all/partial/info'
 ```
