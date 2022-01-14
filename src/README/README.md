@@ -57,15 +57,13 @@ Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Spri
 1) Endpoint para cargar bares a la base de datos:
 ![img.png](img.png)
 　
-
 ```
 curl --location --request POST 'http://localhost:8080/bar/init' \
 --header 'Content-Type: application/json' \
  ```   
 2) Endpoint para guardar bares a la base de datos:
 ![img_1.png](img_1.png)
-
-
+   
 ```
 curl --location --request POST 'http://localhost:8080/bar/save' \
 --header 'Content-Type: application/json' \
