@@ -1,22 +1,17 @@
 package com.example.springbooth2apirest.service;
 
 import com.example.springbooth2apirest.entity.Bar;
-
 import com.example.springbooth2apirest.exception.BarSearchException;
-import org.junit.jupiter.api.Assertions;
+import com.example.springbooth2apirest.repository.IBarRepo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import com.example.springbooth2apirest.repository.IBarRepo;
-
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.Arrays;
+import java.util.Collections;
 
-import static org.mockito.ArgumentMatchers.any;
-
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 class BarServiceImplTest {
@@ -39,17 +34,15 @@ class BarServiceImplTest {
         bar.setNombre("Soy una prueba");
     }
 
-
     @Test
     void showAllCompleteInfo() throws BarSearchException {
-    when(iBarRepoMock.findAll()).thenReturn(Arrays.asList(bar));
-    Assertions.assertNotNull(barService.showAllCompleteInfo());
+    when(iBarRepoMock.findAll()).thenReturn(Collections.singletonList(bar));
+    assertNotNull(barService.showAllCompleteInfo());
     }
 
     @Test
     void showAllPartialInfo() throws BarSearchException {
-        when(iBarRepoMock.findAll()).thenReturn(Arrays.asList(bar));
-        Assertions.assertNotNull(barService.showAllPartialInfo());
+        when(iBarRepoMock.findAll()).thenReturn(Collections.singletonList(bar));
+        assertNotNull(barService.showAllPartialInfo());
     }
-
 }
