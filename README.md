@@ -34,7 +34,7 @@ Internamente este endpoint controla si la tabla de Bares esta vacia la carga si 
 - [x] Java 16
 - [x] H2 database
 - [x] lombok.
-- [x] Postman: [Descargar collection aqui](https://github.com/BrigitteAlejandra19/EjercicioExperta/blob/master/postman)
+- [x] Postman: [Descargar collection aqui](https://github.com/BrigitteAlejandra19/SpringbootH2ApiRestExperta/blob/master/postman)
 - [x] Docker.
 - [x] Intellij ide.
 
