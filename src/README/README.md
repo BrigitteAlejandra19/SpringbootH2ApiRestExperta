@@ -39,7 +39,7 @@ Internamente este endpoint controla si la tabla de Bares esta vacia la carga si 
 
 ### Arquitectura utilizada
 Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Sprigboot donde se agregaron las siguientes capas: 
-1) Controllador: contiene los endpoinds solicitados en el ejercicio
+1) Controlador: contiene los endpoinds solicitados en el ejercicio
 2) Servicio: Contiene la logica de negocio para conectarse a la capa de datos
 3) Repositorio: contiene la logica del acceso a los datos (JPA)
 
@@ -52,11 +52,11 @@ Se realizo una arquitectura de Rest Api con el servidor que nos proporciona Spri
 - Documentar con Swagger
 
 
-##Documentacion
+### Documentaciòn
 
 1) Endpoint para cargar bares a la base de datos:
 ![img.png](img.png)
-   ####Curl　
+　
 
 ```javascript
 curl --location --request POST 'http://localhost:8080/bar/init' \
@@ -76,7 +76,7 @@ curl --location --request POST 'http://localhost:8080/bar/init' \
 2) Endpoint para guardar bares a la base de datos:
 ![img_1.png](img_1.png)
 
-####Curl
+
 ```
 curl --location --request POST 'http://localhost:8080/bar/save' \
 --header 'Content-Type: application/json' \
@@ -95,7 +95,7 @@ curl --location --request POST 'http://localhost:8080/bar/save' \
 ```
 3) Endpoint para mostrar una lista con todo el detalle de todos los bares:
 ![img_2.png](img_2.png)
-   ####Curl
+   
 ```
 curl --location --request GET 'http://localhost:8080/bar/all'
 ```
